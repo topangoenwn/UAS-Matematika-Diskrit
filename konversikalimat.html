@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>  
+<head>
+  <title> Konversi Kalimat </title>
+</head>
+<body>
+  <h1>Konversi Bilangan<h1>
+  <script>
+    var Desimal, Biner, Heksa, Okta, i, nilai, tampung;
+    
+    Desimal = [];
+    Biner = [];
+    Heksa = [];
+    Okta = [];
+    
+    var kalimat = prompt ("Masukan Kalimat = ");
+    var panjang = kalimat.length;
+    
+    for(var i = 0; i < panjang; i++){
+    
+      nilai = kalimat.charCodeAt(i);
+      Desimal.push(nilai);
+      
+      tampung = parseInt(nilai, 10).toString(2);
+      Biner.push(tampung);
+      
+      tampung = parseInt(nilai, 10).toString(16);
+      Heksa.push(tampung);
+      
+      tampung = parseInt(nilai, 10).toString(8);
+      Okta.push(tampung);
+    }
+    
+    document.write("Desimal = " + Desimal);
+    document.write("<br> Biner = " + Biner);
+    document.write("<br> Heksa = " + Heksa);
+    document.write("<br> Okta = " + Okta);
+    
+  </script>
+  
+  </body>
+  </html>
